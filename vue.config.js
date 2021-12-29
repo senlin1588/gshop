@@ -3,8 +3,8 @@ const px2rem = require('postcss-px2rem');
 
 module.exports = {
 //   runtimeCompiler: true,
-   lintOnSave: false, // 关闭EsLint的规则  
-  css: { // 添加postcss配置
+   lintOnSave: false, // 关闭EsLint的规则   这是
+  css: { // 为了检测修改新建的内容 添加postcss配置
     loaderOptions: {
       postcss: {
         plugins: [
