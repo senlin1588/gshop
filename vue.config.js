@@ -2,7 +2,7 @@ const path = require('path');
 const px2rem = require('postcss-px2rem');
 
 module.exports = {
-//   runtimeCompiler: true,
+//   runtimeCompiler: true, //这个是本地修改后提交的内容  
    lintOnSave: false, // 关闭EsLint的规则   这是
   css: { // 为了检测修改新建的内容 添加postcss配置
     loaderOptions: {
