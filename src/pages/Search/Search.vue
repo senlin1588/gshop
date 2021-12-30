@@ -6,7 +6,7 @@
  
 <script>
 export default {
- name: 'Search-a',
+ name: 'Search',
  data () {
  return {
  msg:''
