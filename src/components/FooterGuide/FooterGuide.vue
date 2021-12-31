@@ -28,6 +28,7 @@
 </template>
  
 <script>
+
 export default {
  name: 'FooterGuide',
  data () {
@@ -58,6 +59,7 @@ export default {
         position fixed
         height 50px
         width  100%
+        background-color: white
         .guide-item
             display flex
             flex-direction column

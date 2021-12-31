@@ -7949,6 +7949,11 @@
     "unquote" "~1.1.1"
     "util.promisify" "~1.0.0"
 
+"swiper@^3.4.2":
+  "integrity" "sha1-Oda0ELGjmDPh9y07cpmd9fXjg5I="
+  "resolved" "https://registry.npmjs.org/swiper/-/swiper-3.4.2.tgz"
+  "version" "3.4.2"
+
 "table@^5.2.3":
   "integrity" "sha1-EpLRlQDOP4YFOwXw6Ofko7shB54="
   "resolved" "https://registry.npmmirror.com/table/download/table-5.4.6.tgz"
