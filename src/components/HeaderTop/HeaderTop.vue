@@ -1,10 +1,10 @@
 <template>
   <header class="header">
-    <slot name="search"></slot>
+    <slot name="search">{{msg}}</slot>
     <a class="header_title">
       <span class="header_title_text ellipsis">{{ title }}</span>
     </a>
-    <slot name="login"></slot>
+    <slot name="login">login</slot>
   </header>
 </template>
  
@@ -16,7 +16,7 @@ export default {
   },
   data() {
     return {
-      msg: "",
+      msg: "search",
     };
   },
 };
@@ -42,7 +42,7 @@ export default {
     width: 10%;
     height: 50%;
 
-    .icon-sousuo {
+    .icon-icon-sousuo {
       font-size: 25px;
       color: #fff;
     }
