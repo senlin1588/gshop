@@ -1,10 +1,6 @@
 <template>
   <section class="profile">
-    <header class="header">
-      <div class="header_title">
-        <span class="header_title_text">我的</span>
-      </div>
-    </header>
+    <HeaderTop title="@我的" />
     <section class="profile-number">
       <router-link to="/login" class="profile-link">
         <div class="profile_image">
@@ -96,8 +92,12 @@
 </template>
  
 <script>
+import HeaderTop from "../../components/HeaderTop/HeaderTop.vue";
 export default {
   name: "Profile",
+  components: {
+    HeaderTop,
+  },
   data() {
     return {
       msg: "",

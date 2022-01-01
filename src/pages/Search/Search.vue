@@ -1,10 +1,6 @@
 <template>
   <section class="search">
-    <header class="header">
-      <div class="header_title">
-        <span class="header_title_text">搜索</span>
-      </div>
-    </header>
+ <HeaderTop title="搜索"/>
     <form class="search_form" action="#">
       <input
         type="search"
@@ -18,8 +14,12 @@
 </template>
  
 <script>
+ import HeaderTop from '../../components/HeaderTop/HeaderTop.vue'
 export default {
   name: "Search",
+    components: {
+      HeaderTop
+    },
   data() {
     return {
       msg: "",
