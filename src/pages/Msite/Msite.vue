@@ -1,7 +1,7 @@
 <template>
   <div class="msite">
     <!--首页头部-->
-    <HeaderTop title="@昌平区北七家宏福科技园(338省道北)">
+    <HeaderTop title="昌平区北七家宏福科技园(338省道北)">
       <router-link slot="search" to="/search" class="header_search">
         <i class="iconfont icon-icon-sousuo">搜索</i>
       </router-link>
@@ -11,7 +11,7 @@
     </HeaderTop>
     <!--首页导航-->
     <nav class="msite_nav border-1px">
-      <div class="swiper-container">
+      <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <a href="javascript:" class="link_to_food">
@@ -115,7 +115,7 @@
           </div>
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-scrollbar"></div>
       </div>
     </nav>
     <!--首页附近商家-->
@@ -292,20 +292,30 @@
           </li>
         </ul>
       </div>
-    </div> 
+    </div>
   </div>
 </template>
 
 <script>
 import HeaderTop from "../../components/HeaderTop/HeaderTop.vue";
+  import Swiper from 'swiper'
+  import 'swiper/swiper.min.css'
 export default {
   name: "Msite",
   components: {
     HeaderTop,
   },
+    mounted () {
+      new Swiper('.swiper', {
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        loop: true
+      })
+    },
   data() {
     return {
-      msg: "",
+      msg: "msg",
     };
   },
 };
@@ -316,17 +326,16 @@ export default {
 
 .msite {
   width: 100%;
-
   .msite_nav {
     bottom-border-1px(#e4e4e4);
     margin-top: 45px;
     height: 200px;
     background: #fff;
 
-    .swiper-container {
+    .swiper {
       width: 100%;
       height: 100%;
-
+      --swiper-theme-color: #000000;
       .swiper-wrapper {
         width: 100%;
         height: 100%;
