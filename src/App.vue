@@ -11,8 +11,12 @@ import FooterGuide from './components/FooterGuide/FooterGuide.vue'
 import HeaderTop from './components/HeaderTop/HeaderTop.vue'
 import HelloWorld from './components/HelloWorld.vue'
 import ShopList from './components/ShopList/ShopList.vue'
-
+import {reqAddress} from '@/api'
 export default {
+  async mounted(){
+      const result = await reqAddress('116.36867','40.10038')
+      console.log('result',result);
+  },
   name: 'App',
   components: {
     FooterGuide,

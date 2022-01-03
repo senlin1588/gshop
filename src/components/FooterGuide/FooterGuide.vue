@@ -38,10 +38,24 @@ export default {
  },
   methods: {
       goto(path) {
-        this.$router.replace(path)
+          //方案1：如果点击当前项，没有任何效果
+        //   if (path!=this.$route.path) {
+        //       this.$router.replace(path)
+        //   }
+          //方案2：如果点击当前项，刷新当前页面
+            if (path!=this.$route.path) {
+                //如果不是当前页面，则切换页面
+              this.$router.replace(path);
+          }else{
+              //如果是当前页面，则刷新显示
+              window.location = path;
+          }
+        
+
+        
       },
       isCurrent(path) {
-        // console.log(this.$route.path)
+            // console.log(this.$route.path)
         return this.$route.path === path
       }
     }
