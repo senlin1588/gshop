@@ -8,8 +8,9 @@ const BASE = '/api'
 
 // 根据经纬度获取位置详情
 export const reqAddress = (longitude, latitude) => ajax.get(
-    BASE + `/position/${latitude},${longitude}`
-)
+        BASE + `/position/${latitude},${longitude}`
+    )
+
 
 // 获取食品分类列表
 export const reqCategorys = () => ajax({

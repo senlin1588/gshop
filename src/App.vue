@@ -13,9 +13,13 @@ import HelloWorld from './components/HelloWorld.vue'
 import ShopList from './components/ShopList/ShopList.vue'
 import {reqAddress} from '@/api'
 export default {
+  created () {
+  // 异步获取address
+   this.$store.dispatch('getAddress')
+},
   async mounted(){
-      const result = await reqAddress('116.36867','40.10038')
-      console.log('result',result);
+      //const result = await reqAddress('116.36867','40.10038')
+     
   },
   name: 'App',
   components: {

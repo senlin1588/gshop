@@ -1,7 +1,7 @@
 <template>
   <div class="msite">
     <!--首页头部-->
-    <HeaderTop title="昌平区北七家宏福科技园(338省道北)">
+    <HeaderTop :title="address.name||'加载中……'">
       <router-link slot="search" to="/search" class="header_search">
         <i class="iconfont icon-icon-sousuo">搜索</i>
       </router-link>
@@ -298,21 +298,34 @@
 
 <script>
 import HeaderTop from "../../components/HeaderTop/HeaderTop.vue";
-  import Swiper from 'swiper'
-  import 'swiper/swiper.min.css'
+import Swiper from "swiper";
+import "swiper/swiper.min.css";
+import { mapState } from "vuex";
 export default {
+  created(){
+    
+  },
   name: "Msite",
   components: {
     HeaderTop,
   },
     mounted () {
-      new Swiper('.swiper', {
-        pagination: {
-          el: '.swiper-pagination',
-        },
-        loop: true
-      })
+      
+      this.$store.dispatch('getCategorys')
+      this.$store.dispatch('getShops')
     },
+  computed: {
+     ...mapState(['address']),
+  },
+  mounted() {
+   
+    new Swiper(".swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      loop: true,
+    });
+  },
   data() {
     return {
       msg: "msg",
@@ -326,6 +339,7 @@ export default {
 
 .msite {
   width: 100%;
+
   .msite_nav {
     bottom-border-1px(#e4e4e4);
     margin-top: 45px;
@@ -336,6 +350,7 @@ export default {
       width: 100%;
       height: 100%;
       --swiper-theme-color: #000000;
+
       .swiper-wrapper {
         width: 100%;
         height: 100%;

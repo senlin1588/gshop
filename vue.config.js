@@ -30,7 +30,7 @@ module.exports = {
     },
     devServer: {
         host: "localhost", 
-        port: '8081', //我的端口,端口生效了
+        port: '8080', //我的端口,端口生效了
         https: false,
         proxy: {
             '/api': { // 匹配所有以 '/api'开头的请求路径
